@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portofolio Bagus</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <style>
+    body { padding-top: 70px; }
+    .section { padding: 60px 0; }
+    iframe { border: none; width: 100%; height: 400px; }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar fixed-top navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Bagus - Data Analyst</a>
+    </div>
+  </nav>
+
+  <!-- Tentang -->
+  <div class="container section" id="about">
+    <h2>Tentang Saya</h2>
+    <p>Seorang data analyst yang fokus pada pengolahan data, prediksi, dan visualisasi. Mahir menggunakan Python, SQL, dan berbagai tools analitik.</p>
+  </div>
+
+  <!-- Proyek -->
+  <div class="container section" id="projects">
+    <h2>Proyek (Contoh Visualisasi)</h2>
+    <div id="grafik-dummy"></div>
+    <script>
+      var data = [{
+        x: ['Produk A', 'Produk B', 'Produk C'],
+        y: [120, 200, 150],
+        type: 'bar',
+        marker: { color: 'rgba(100,150,250,0.7)' }
+      }];
+
+      var layout = {
+        title: 'Contoh Penjualan per Produk',
+        xaxis: { title: 'Produk' },
+        yaxis: { title: 'Jumlah Terjual' }
+      };
+
+      Plotly.newPlot('grafik-dummy', data, layout);
+    </script>
+  </div>
+
+  <!-- Sertifikasi -->
+  <div class="container section" id="certificates">
+    <h2>Sertifikasi</h2>
+    <ul>
+      <li>Google Data Analytics</li>
+      <li>Python for Data Science – Coursera</li>
+    </ul>
+  </div>
+
+  <!-- Kontak -->
+  <div class="container section" id="contact">
+    <h2>Kontak</h2>
+    <p>Email: bagus@email.com</p>
+    <a href="CV-Bagus.pdf" download>Unduh CV</a>
+  </div>
+</body>
+</html>
